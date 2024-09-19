@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator Page 1</title>
+    <link rel="stylesheet" href="style.css">
+    <!--linking google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jaini+Purva&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Nanum Myeongjo' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="leftPannel" >
+        <h1 id="yourPersonalInfo">Personal Info</h1>
+        <form action="action.php">
+            <input class="inputInfo" type="text" placeholder="Your First Name">
+            <br/>
+            <input class="inputInfo" type="text" placeholder="Your Second Name">
+            <br/>
+            <input class="inputInfo" type="text" placeholder="Your Institute Name">
+            <br/>
+            <input class="inputInfo" type="text" placeholder="Your Degree Name">
+            <br/>
+            <div class="semesterContainer">
+                <div id="semesterNumberText">Select Semester Number</div>
+                <select id="semesterNumberChoice" placeholder="Select Semester Number">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </div>
+        </form>
+        <br/>
+        <a id="mainCalculator" href="mainCalculator.html">
+            Next
+        </a>
+    </div>
+
+
+    <div id="rightPannel">
+        <h1 id="welcome">Welcome to the</h1>
+        <div id="CGPAcontainer">
+            <p id="CGPA">CGPA Calculator!</p>
+            <div id="icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        </div>
+        
+        <p id="paragraph">Easily calculate your GPA by entering your details and marks. With quick results and a PDF option, managing your academic progress has never been simpler. Start now and stay on top of your grades!</p>
+    </div>
+
+</body>
+</html>
