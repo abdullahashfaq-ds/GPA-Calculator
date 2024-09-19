@@ -8,23 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jaini+Purva&display=swap" rel="stylesheet">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jaini+Purva&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
 </head>
-
 <body>
     <div id="left">
         <h2>
@@ -114,61 +108,53 @@
     </div> 
 
 
-    <div id="right">
+
+    <div id="rightPannelMainPage">
         <h1 id="heading">GPA Calculator</h1>
         <h2 id="semester">Semester</h2>
-    
+        <div id="headings">
+            <div id="CourseName">Course Name</div>
+            <div >Marks</div>
+            <div >Credits</div>
+        </div>
+        <div id="inputInformation">
+           <form action="action.php">
+                <div id="Info1" class="infoRow">
+                    <input class="inputInfor" type="text" placeholder="Eg Advanced Calculus">
+                    <input class="inputInfor" type="number" placeholder="Eg 75">
+                    <input class="inputInfor" type="number" placeholder="Eg 2">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </div>
 
-    <div class="course">
-        <div id="one">
-            Course Name
-        </div>
-        <div id="two">
-            Marks
-        </div>
-        <div id="three">
-            Credits
+                <div id="Info2" class="infoRow">
+                    <input class="inputInfor" type="text" placeholder="Eg Linear Algebra">
+                    <input class="inputInfor" type="number" placeholder="Eg 64">
+                    <input class="inputInfor" type="number" placeholder="Eg 1">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </div> 
+                    
+                <div id="AddClear">
+                    <div id="addCourse">
+                        <i id="addIcon" class="fa-solid fa-circle-plus"></i>
+                        <p>Add Course</p>
+                    </div>
+                    <div id="clearAll">
+                        <i id="crossIcon" class="fa-regular fa-circle-xmark"></i>
+                        <p>Clear All</p>
+                    </div> 
+                </div>
+
+                <div id="ButtonsBelow">
+                    <button id="Caclulate">Calculate GPA</button>
+                    <button id="addSemester">Add Semester</button>
+                    <button id="download">Download PDF</button>
+                </div>
+           </form>
+           <div id="finalResults">
+                <p>Total Credits:</p>
+                <p id="finalCGPA">Your CGPA: </p>
+           </div>
         </div>
     </div>
-
-    <div class="name">
-        <div id="sub">
-        <input class="name" type="text" placeholder="Eg. Advanced Calculus" style="background-color: #F4D35E54;">
-        </div>
-        <div id="marks">
-        <input class="name" type="text" placeholder="          Eg. 75        " style="background-color: #F4D35E54;">
-        </div>
-        <div id="credit">
-        <input class="name" type="text" placeholder="          Eg. 1         " style="background-color: #F4D35E54;">
-        </div>
-        <div id="button">
-            <button class="close-btn"><i class="fa-solid fa-circle-xmark"></i></button>
-            <!-- <button><i class="fa-regular fa-circle-xmark"></i></button> -->
-        </div>
-    </div>
-
-    <div class="name">
-        <div id="sub">
-        <input class="name" type="text" placeholder="Eg. Advanced Calculus" style="background-color: #F4D35E54;">
-        </div>
-        <div id="marks">
-        <input class="name" type="text" placeholder="          Eg. 75        " style="background-color: #F4D35E54;">
-        </div>
-        <div id="credit">
-        <input class="name" type="text" placeholder="          Eg. 1         " style="background-color: #F4D35E54;">
-        </div>
-        <div id="button">
-            <button class="close-btn"><i class="fa-regular fa-circle-xmark"></i></button>
-        </div>
-    </div>
-
-    <div class="addButtons">
-        <button class="add" style="color: #083D77;"><i class="fa-solid fa-plus"></i></button>
-        <p>Add Course</p>
-        <button class="clear" style="color: red;"><i class="fa-regular fa-circle-xmark"></i></button>
-        <p>Clear All</p>
-    </div>
-
-    
 </body>
 </html>
