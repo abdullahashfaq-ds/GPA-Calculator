@@ -11,7 +11,12 @@
 </head>
 
 <body>
-    <h1>GPA Calculator</h1>
+    {% include 'navbar.html' %}
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
 
     <script src="{% static 'js/scripts.js' %}"></script>
 </body>

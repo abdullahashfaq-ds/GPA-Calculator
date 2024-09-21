@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+    <div>
+        <h2>GPA Results</h2>
+
+        <p>Total Credit Hours: {{ total_crd_hrs }}</p>
+        <p>Calculated GPA: {{ calculated_gpa }}</p>
+
+        {% if pdf_result %}
+        <a href="{% url 'download_pdf' pdf_path %}">Download PDF</a>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
