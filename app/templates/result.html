@@ -2,15 +2,18 @@
 
 {% block content %}
 
-<div>
-    <div>
-        <h2>GPA Results</h2>
+<div class="bg-[#EBEBD3] py-20 text-center min-h-screen">
+    <div class="py-12 max-w-md mx-auto bg-white rounded-lg shadow-lg">
+        <h2 class="text-[#083D77] font-bold text-4xl">GPA Results</h2>
 
-        <p>Total Credit Hours: {{ total_crd_hrs }}</p>
-        <p>Calculated GPA: {{ calculated_gpa }}</p>
+        <p class="text-[#083D77] text-xl">Total Credit Hours: {{ total_crd_hrs }}</p>
+        <p class="text-[#083D77] text-xl">Calculated GPA: {{ calculated_gpa }}</p>
 
         {% if pdf_result %}
-        <a href="{% url 'download_pdf' pdf_path %}">Download PDF</a>
+        <a href="{% url 'download_pdf' pdf_path %}" 
+           class="inline-block mt-5 rounded-lg bg-[#083D77] text-[#F4D35E] py-3 px-6 text-lg transition-all duration-300 hover:bg-[#EE964B] hover:text-[#083D77] hover:font-bold">
+            Download PDF
+        </a>
         {% endif %}
     </div>
 </div>

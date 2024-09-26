@@ -2,8 +2,8 @@
 
 {% block content %}
 
-<div>
-    <form id="gpa-form" action="{% url 'calculator' %}" method="post">
+<div class="flex items-center justify-center min-h-screen bg-[#EBEBD3] p-4">
+    <form id="gpa-form" action="{% url 'calculator' %}" method="post" class="w-full max-w-lg bg-white rounded-lg shadow-lg p-6 space-y-6">
         {% csrf_token %}
 
         <input type="hidden" name="name" value="{{ name }}">
@@ -11,28 +11,41 @@
         <input type="hidden" name="degree" value="{{ degree }}">
         <input type="hidden" name="semester" value="{{ semester }}">
 
-        <table id="courses-table">
+        <h2 class="text-[#083D77] text-2xl font-[Rubik] text-center mb-6">GPA Calculator</h2>
+
+        <!-- Table for course inputs -->
+        <table id="courses-table" class="w-full table-auto">
             <thead>
-                <tr>
-                    <th>Course Title</th>
-                    <th>Credit Hours</th>
-                    <th>Obtained Marks</th>
-                    <th>Action</th>
+                <tr class="text-[#083D77]">
+                    <th class="p-2 text-left">Course Title</th>
+                    <th class="p-2 text-left">Credit Hours</th>
+                    <th class="p-2 text-left">Obtained Marks</th>
+                    <th class="p-2 text-left">Action</th>
                 </tr>
             </thead>
             <tbody>
+                <!-- First Row -->
                 <tr>
-                    <td><input type="text" name="course_title" placeholder="Enter course title" required></td>
-                    <td><input type="text" name="credit_hours" placeholder="Enter credit hours" required></td>
-                    <td><input type="text" name="obtained_marks" placeholder="Enter obtained marks" required></td>
-                    <td><button type="button" class="remove-course-btn">Remove</button></td>
+                    <td>
+                        <input type="text" name="courses[0][title]" placeholder="Course title" required class="w-full bg-[#F4D35E] text-[#083D77] placeholder-[#083D77] p-2 rounded" />
+                    </td>
+                    <td>
+                        <input type="number" name="courses[0][credit_hours]" placeholder="Credit hours" required class="w-full bg-[#F4D35E] text-[#083D77] placeholder-[#083D77] p-2 rounded" />
+                    </td>
+                    <td>
+                        <input type="number" name="courses[0][obtained_marks]" placeholder="Obtained marks" required class="w-full bg-[#F4D35E] text-[#083D77] placeholder-[#083D77] p-2 rounded" />
+                    </td>
+                    <td>
+                        <button type="button" class="remove-course-btn text-red-500 hover:text-red-700">Remove</button>
+                    </td>
                 </tr>
             </tbody>
         </table>
 
-        <div>
-            <button type="button" id="add-course-btn">Add Course</button>
-            <button type="submit">Calculate GPA</button>
+        <!-- Buttons for Adding Course and Submitting Form -->
+        <div class="flex justify-between mt-4">
+            <button type="button" id="add-course-btn" class="bg-[#083D77] text-[#F4D35E] rounded-lg py-2 px-4 hover:bg-[#EE964B] hover:text-[#083D77] hover:font-bold transition-colors">Add Course</button>
+            <button type="submit" class="bg-[#083D77] text-[#F4D35E] rounded-lg py-2 px-4 hover:bg-[#EE964B] hover:text-[#083D77] hover:font-bold transition-colors">Calculate GPA</button>
         </div>
     </form>
 </div>

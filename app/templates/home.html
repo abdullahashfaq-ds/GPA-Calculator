@@ -1,26 +1,56 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="flex items-center justify-center" style="height: calc(100vh - 55.9px); min-height: 300px; background-color: #EBEBD3;">
+    <form action="{% url 'home' %}" method="post" class="bg-white p-4 rounded shadow-md w-full max-w-sm">
 
-<div>
-    <form action="{% url 'home' %}" method="post">
-        {% csrf_token %}
-        <h2>Student Information</h2>
+         {% csrf_token %}
+        <h2 class="text-2xl font-bold mb-3 text-center" style="color: #083D77; font-family: 'Jaini Purva', sans-serif;">
+            STUDENT INFORMATION
+        </h2>
 
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        <div class="mb-2">
+            <label for="name" class="block" style="color: #083D77; font-family: 'Nanum Myeongjo', serif; font-weight: bold;">
+                Full Name
+            </label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required
+                class="w-full px-3 py-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                style="border-radius: 20px;">
+        </div>
 
-        <label for="university">Institution</label>
-        <input type="text" id="university" name="university" placeholder="Enter your university" required>
+        <div class="mb-2">
+            <label for="university" class="block" style="color: #083D77; font-family: 'Nanum Myeongjo', serif; font-weight: bold;">
+                Institution
+            </label>
+            <input type="text" id="university" name="university" placeholder="Enter your university" required
+                class="w-full px-3 py-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                style="border-radius: 20px;">
+        </div>
 
-        <label for="degree">Program of Study</label>
-        <input type="text" id="degree" name="degree" placeholder="Enter your degree program" required>
+        <div class="mb-2">
+            <label for="degree" class="block" style="color: #083D77; font-family: 'Nanum Myeongjo', serif; font-weight: bold;">
+                Program of Study
+            </label>
+            <input type="text" id="degree" name="degree" placeholder="Enter your degree program" required
+                class="w-full px-3 py-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                style="border-radius: 20px;">
+        </div>
 
-        <label for="semester">Academic Term</label>
-        <input type="text" id="semester" name="semester" placeholder="Enter your semester" required>
+        <div class="mb-3">
+            <label for="semester" class="block" style="color: #083D77; font-family: 'Nanum Myeongjo', serif; font-weight: bold;">
+                Academic Term
+            </label>
+            <input type="text" id="semester" name="semester" placeholder="Enter your semester" required
+                class="w-full px-3 py-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                style="border-radius: 20px;">
+        </div>
 
-        <button type="submit">Proceed</button>
+        <button type="submit" class="w-full py-2 rounded-lg focus:outline-none focus:ring-2"
+            style="background-color: #083D77; color: #F4D35E; border-radius: 20px; transition: all 0.3s;"
+            onmouseover="this.style.backgroundColor='#EE964B'; this.style.color='#083D77'; this.style.fontWeight='bold';"
+            onmouseout="this.style.backgroundColor='#083D77'; this.style.color='#F4D35E'; this.style.fontWeight='normal';">
+            Proceed
+        </button>
     </form>
 </div>
-
 {% endblock %}
