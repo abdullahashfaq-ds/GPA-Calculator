@@ -4,14 +4,14 @@
 
 <div class="bg-[#EBEBD3] py-20 text-center min-h-screen">
     <div class="py-12 max-w-md mx-auto bg-white rounded-lg shadow-lg">
-        <h2 class="text-[#083D77] font-bold text-4xl">GPA Results</h2>
+        <h2 class="text-[#083D77] font-[Rubik] font-semibold text-3xl mb-6">GPA Results</h2>
 
-        <p class="text-[#083D77] text-xl">Total Credit Hours: {{ total_crd_hrs }}</p>
-        <p class="text-[#083D77] text-xl">Calculated GPA: {{ calculated_gpa }}</p>
+        <p class="text-[#083D77] text-lg font-semibold">Total Credit Hours: &nbsp; <span class="font-bold text-[19px]">{{ total_crd_hrs }}</span></p>
+        <p class="text-[#083D77] text-lg font-semibold">Calculated GPA: &nbsp; <span class="font-bold text-[19px]">{{ calculated_gpa }}</span></p>
 
         {% if pdf_result %}
         <a href="{% url 'download_pdf' pdf_path %}" 
-           class="inline-block mt-5 rounded-lg bg-[#083D77] text-[#F4D35E] py-3 px-6 text-lg transition-all duration-300 hover:bg-[#EE964B] hover:text-[#083D77] hover:font-bold">
+           class="inline-block mt-6 rounded-lg bg-[#083D77] text-lg font-semibold text-[#F4D35E] py-2 px-6 text-lg transition-all duration-300 hover:bg-[#fab070] hover:text-[#083D77]">
             Download PDF
         </a>
         {% endif %}
