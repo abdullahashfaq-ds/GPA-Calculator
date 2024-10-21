@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
 <div class="flex items-center justify-center" style="height: calc(100vh - 55.9px); min-height: 300px; background-color: #EBEBD3;">
     <form action="{% url 'home' %}" method="post" class="bg-white py-4 px-6 rounded-lg shadow-md w-full max-w-lg">
+        {% csrf_token %}
 
-         {% csrf_token %}
         <h2 class="text-3xl font-bold mb-3 text-center" style="color: #083D77; font-family: 'Jaini Purva', sans-serif;">
             STUDENT INFORMATION
         </h2>
@@ -53,4 +54,5 @@
         </button>
     </form>
 </div>
+
 {% endblock %}

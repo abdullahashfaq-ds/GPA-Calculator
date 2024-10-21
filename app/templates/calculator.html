@@ -13,7 +13,6 @@
 
         <h2 class="text-[#083D77] text-2xl font-[Rubik] text-center font-semibold">GPA Calculator</h2>
 
-        <!-- Table for course inputs -->
         <table id="courses-table" class="w-full table-auto border-separate border-spacing-x-3 border-spacing-y-2">
             <thead>
                 <tr class="text-[#083D77]">
@@ -24,16 +23,15 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- First Row -->
                 <tr>
                     <td>
-                        <input type="text" name="courses[0][title]" placeholder="Enter course title" required class="w-full bg-[#f7da74] text-[#083D77] placeholder-[#083D77] p-2 rounded" />
+                        <input type="text" name="course_title" placeholder="Enter course title" required class="w-full bg-[#f7da74] text-[#083D77] placeholder-[#083D77] p-2 rounded" />
                     </td>
                     <td>
-                        <input type="number" name="courses[0][credit_hours]" placeholder="Enter credit hours" required class="w-full bg-[#f7da74] text-[#083D77] placeholder-[#083D77] p-2 rounded" />
+                        <input type="text" name="credit_hours" placeholder="Enter credit hours" required class="w-full bg-[#f7da74] text-[#083D77] placeholder-[#083D77] p-2 rounded" />
                     </td>
                     <td>
-                        <input type="number" name="courses[0][obtained_marks]" placeholder="Enter obtained marks" required class="w-full bg-[#f7da74] text-[#083D77] placeholder-[#083D77] p-2 rounded" />
+                        <input type="text" name="obtained_marks" placeholder="Enter obtained marks" required class="w-full bg-[#f7da74] text-[#083D77] placeholder-[#083D77] p-2 rounded" />
                     </td>
                     <td>
                         <button type="button" class="remove-course-btn text-[17px] font-semibold text-red-500 hover:text-red-700 hover:underline transition duration-300 ease-in-out">Remove</button>
@@ -42,7 +40,6 @@
             </tbody>
         </table>
 
-        <!-- Buttons for Adding Course and Submitting Form -->
         <div class="flex justify-between mt-4 px-3">
             <button type="button" id="add-course-btn" class="bg-[#083D77] text-[#F4D35E] text-lg rounded-lg py-2 font-semibold px-6 hover:bg-[#fab070] hover:text-[#083D77] transition ease-in-out duration-300">Add Course</button>
             <button type="submit" class="bg-[#083D77] text-[#F4D35E] text-lg rounded-lg py-2 font-semibold px-6 hover:bg-[#fab070] hover:text-[#083D77] transition ease-in-out duration-300">Calculate GPA</button>
